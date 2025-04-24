@@ -17,7 +17,7 @@ public class CodeGeneratorService {
     }
 
     public Flux<String> generateApiCode(GenerateCodeReq generateCodeReq) {
-        String prompt = "帮我写一个Spring Boot REST API，包括Controller、Service、Repository，实体名是：" + generateCodeReq.getEntityName() + "，字段有：" + generateCodeReq.getFields();
+        String prompt = "plz write for me a Spring Boot REST API，include Controller、Service、Repository，entity name is：" + generateCodeReq.getEntityName() + "，field include：" + generateCodeReq.getFields();
         return openAIClient.generateCodeStream(prompt);
     }
 }
