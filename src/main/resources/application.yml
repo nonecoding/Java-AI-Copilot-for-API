@@ -1,7 +1,7 @@
 # application.yml
 openai:
   api:
-    key: ***REMOVED***
+    key: YOUR_OPENAI_API_KEY
     url: https://api.openai.com/v1/chat/completions
 
 server:
