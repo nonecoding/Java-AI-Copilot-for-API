@@ -16,6 +16,11 @@ public class CodeGenController {
         this.codeGeneratorService = codeGeneratorService;
     }
 
+    /**
+     * @param entityName
+     * @param fields
+     * @return
+     */
     @PostMapping("/generate")
     public ResponseEntity<String> generateCode(@RequestParam String entityName, @RequestParam String fields) {
         String code = codeGeneratorService.generateApiCode(entityName, fields);

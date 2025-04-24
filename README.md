@@ -1,4 +1,3 @@
-好！我来给你把这个 `README.md` 改成一份**专业简洁、国际化的英文版**，适合放 GitHub，吸引国外开发者关注👇：
 
 ---
 
@@ -132,6 +131,4 @@ If you like this project, please consider giving it a ⭐️ Star!
 
 ---
 
-✅ 直接保存为项目根目录 `README.md` 即可。
 
-要是你想，我还能给你把这个英文版配个 `GitHub Project Description` 和 `Repository Topics` 标签推荐，能帮项目曝光更好。要就说句：“来个英文简介和话题标签” 🔥
