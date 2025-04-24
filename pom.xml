@@ -51,6 +51,11 @@
             <version>1.18.26</version>  <!-- 最新版本可以从 Maven Central 获取 -->
             <scope>provided</scope> <!-- 运行时不需要Lombok，编译时才用 -->
         </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.2.0.Final</version> <!-- 请使用适合的版本 -->
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
