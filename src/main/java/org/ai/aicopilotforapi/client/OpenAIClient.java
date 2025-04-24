@@ -67,7 +67,7 @@ public class OpenAIClient {
             ObjectMapper mapper = new ObjectMapper();
             JsonNode node = mapper.readTree(chunk);
             JsonNode choices = node.get("choices");
-            if (choices != null && choices.isArray() && choices.size() > 0) {
+            if (choices != null && choices.isArray() && !choices.isEmpty()) {
                 JsonNode delta = choices.get(0).get("delta");
                 if (delta != null && delta.has("content")) {
                     return delta.get("content").asText();
