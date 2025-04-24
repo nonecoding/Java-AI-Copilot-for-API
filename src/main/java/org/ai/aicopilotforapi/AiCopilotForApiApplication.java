@@ -3,6 +3,9 @@ package org.ai.aicopilotforapi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * TODO 全局过滤掉git commit和push中的appilication.yml和application-test.yml
+ */
 @SpringBootApplication
 public class AiCopilotForApiApplication {
 
