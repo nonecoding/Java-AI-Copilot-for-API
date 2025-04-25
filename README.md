@@ -84,9 +84,9 @@ We love contributions, memes, and coffee-fueled late-night bug hunts:
 Released under **Apache 2.0**. See [LICENSE](LICENSE) for deets.
 
 
-### Hi there 👋, 我是张三（ZhangSan）
-☕️ Java 后端工程师 ｜ 🎮 Unity 游戏开发爱好者 ｜ 📚 阅读狂热分子
-> “代码要写得像诗一样优雅”  
+### Hi there 👋, I am Schrödinger's Earth Online（Schrödinger's Earth Online）
+☕️ Java backend programmer ｜ 🎮 Unity game develop lover ｜ 📚 Reading enthusiasts
+> "Write code as elegantly as a poem." 
 
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?logo=java)
