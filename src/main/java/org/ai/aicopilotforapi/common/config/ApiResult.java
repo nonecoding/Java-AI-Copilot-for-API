@@ -11,15 +11,25 @@ import java.time.Instant;
 public class ApiResult<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    /** 是否成功 */
+    /**
+     * 是否成功
+     */
     private boolean success;
-    /** 业务状态码 */
+    /**
+     * 业务状态码
+     */
     private int code;
-    /** 提示或错误消息 */
+    /**
+     * 提示或错误消息
+     */
     private String message;
-    /** 具体数据 */
+    /**
+     * 具体数据
+     */
     private T data;
-    /** 响应时间戳（UTC 毫秒） */
+    /**
+     * 响应时间戳（UTC 毫秒）
+     */
     private long timestamp;
 
     // ========= Constructors =========
@@ -29,36 +39,46 @@ public class ApiResult<T> implements Serializable {
     }
 
     private ApiResult(boolean success, int code, String message, T data) {
-        this.success   = success;
-        this.code      = code;
-        this.message   = message;
-        this.data      = data;
+        this.success = success;
+        this.code = code;
+        this.message = message;
+        this.data = data;
         this.timestamp = Instant.now().toEpochMilli();
     }
 
     // ========= Static Factory Methods =========
 
-    /** 返回一个操作成功但无数据的结果 */
+    /**
+     * 返回一个操作成功但无数据的结果
+     */
     public static <T> ApiResult<T> success() {
         return new ApiResult<>(true, 200, "OK", null);
     }
 
-    /** 返回一个操作成功且带数据的结果 */
+    /**
+     * 返回一个操作成功且带数据的结果
+     */
     public static <T> ApiResult<T> success(T data) {
         return new ApiResult<>(true, 200, "OK", data);
     }
 
-    /** 自定义操作成功的状态码、消息和数据 */
+    /**
+     * 自定义操作成功的状态码、消息和数据
+     */
     public static <T> ApiResult<T> success(int code, String message, T data) {
         return new ApiResult<>(true, code, message, data);
     }
 
-    /** 返回一个操作失败的结果 */
+    /**
+     * 返回一个操作失败的结果
+     */
     public static <T> ApiResult<T> failure(int code, String message) {
         return new ApiResult<>(false, code, message, null);
     }
 
-    /** 通用错误（500） */
+    /**
+     * 通用错误（500）
+     */
     public static <T> ApiResult<T> error(String message) {
         return new ApiResult<>(false, 500, message, null);
     }
@@ -92,18 +112,43 @@ public class ApiResult<T> implements Serializable {
 
     // ========= Getters & Setters =========
 
-    public boolean isSuccess() { return success; }
-    public void setSuccess(boolean success) { this.success = success; }
+    public boolean isSuccess() {
+        return success;
+    }
 
-    public int getCode() { return code; }
-    public void setCode(int code) { this.code = code; }
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
 
-    public String getMessage() { return message; }
-    public void setMessage(String message) { this.message = message; }
+    public int getCode() {
+        return code;
+    }
 
-    public T getData() { return data; }
-    public void setData(T data) { this.data = data; }
+    public void setCode(int code) {
+        this.code = code;
+    }
 
-    public long getTimestamp() { return timestamp; }
-    public void setTimestamp(long timestamp) { this.timestamp = timestamp; }
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
 }

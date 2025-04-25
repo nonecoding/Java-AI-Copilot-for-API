@@ -20,8 +20,8 @@ public class MinioConfig {
     @Bean
     public MinioClient minioClient() {
         return MinioClient.builder()
-            .endpoint(endpoint)
-            .credentials(accessKey, secretKey)
-            .build();                                       // 构建 MinIO 客户端 :contentReference[oaicite:7]{index=7}
+                .endpoint(endpoint)
+                .credentials(accessKey, secretKey)
+                .build();                                       // 构建 MinIO 客户端 :contentReference[oaicite:7]{index=7}
     }
 }

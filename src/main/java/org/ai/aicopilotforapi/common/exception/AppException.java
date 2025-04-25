@@ -20,7 +20,7 @@ public class AppException extends RuntimeException {
         this(code, message, null, Collections.emptyList());
     }
 
-    public AppException(int code, String message,String data) {
+    public AppException(int code, String message, String data) {
         this(code, message, null, Collections.emptyList());
     }
 
@@ -51,7 +51,7 @@ public class AppException extends RuntimeException {
      */
     public AppException(int code, String message, Throwable cause, List<String> details) {
         super(message, cause);
-        this.code    = code;
+        this.code = code;
         this.details = details;
     }
 

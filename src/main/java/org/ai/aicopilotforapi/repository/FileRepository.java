@@ -18,21 +18,21 @@ public class FileRepository {
     public void upload(String bucket, String objectName, InputStream data, long size, String contentType) throws Exception {
         // 确保桶存在可选；示例忽略
         client.putObject(
-            PutObjectArgs.builder()
-                .bucket(bucket)
-                .object(objectName)
-                .stream(data, size, -1)
-                .contentType(contentType)
-                .build()
+                PutObjectArgs.builder()
+                        .bucket(bucket)
+                        .object(objectName)
+                        .stream(data, size, -1)
+                        .contentType(contentType)
+                        .build()
         );
     }
 
     public InputStream download(String bucket, String objectName) throws Exception {
         return client.getObject(
-            GetObjectArgs.builder()
-                .bucket(bucket)
-                .object(objectName)
-                .build()
+                GetObjectArgs.builder()
+                        .bucket(bucket)
+                        .object(objectName)
+                        .build()
         );
     }
 }
