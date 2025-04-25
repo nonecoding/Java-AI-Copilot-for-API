@@ -1,134 +1,87 @@
+# AI Agent Platform 🚀
 
----
+Welcome to the **AI Agent Platform**, an open-source marvel powered by **Java** and a **modular multi-agent AI** architecture. We turn complex code generation and workflow orchestration into a playful, drag-and-drop experience! 
 
-## 📄 README.md (English)
+## ✨ Why This Project Rocks
 
-```markdown
-# 🚀 Java AI Copilot for API
+- 🔧 **Micro‐Agents, Big Impact**: Each tiny Agent does one thing—and does it brilliantly: LLM chats, data fetching, code formatting, you name it. They team up through an **asynchronous message bus**, so your system stays snappy and resilient. 
+- 🌐 **Web‐First, Zero Install**: No clunky desktop apps—just spin up a Docker Compose stack, point your browser to `http://localhost:3000`, and watch your workflows come to life with real-time logs and beautiful charts.  
+- 🧩 **Plugin Paradise**: Want a new Agent? Drop in a JAR, register it in `agent-registration.yml`, and **voilà**—instant new capability! Integrate novel LLMs, connect custom databases, or add fancy post‐processing steps without touching core code.
 
-An AI-powered Java API auto-generator based on OpenAI GPT API. It generates complete Java Spring Boot APIs, entities, services, controllers, unit tests, and API documentation — eliminating tedious CRUD work and boosting your productivity!
+## 🎁 Core Features
 
----
+1. **Workflow Wizardry**: Sketch out your process as a **DAG** (Directed Acyclic Graph). Drag, connect, and click **Run**—your tasks execute in topological order, no headaches.  
+2. **Elastic Agent Pool**: Scale Agents up or down on-the-fly. High concurrency? Spin up more. Low traffic? Spin down to save resources.  
+3. **LLM Buffet**: Plug in OpenAI’s `gpt-4o-mini`, local LLMs like llama.cpp, or any REST‐API model. One interface to rule them all.  
+4. **Live Metrics & Logs**: Inspect task progress, Agent latencies, queue depths, and results in real-time. Colorful graphs make monitoring delightful!  
+5. **Rock-Solid Security**: Built‑in JWT authentication, role-based access control (RBAC), and secure inter‑service calls lock down your platform.
 
-## 📦 Features
-
-- 📖 Generate full Java API code by providing entity name and fields
-- 🤖 Integrated OpenAI GPT model for intelligent code generation
-- 💻 Frontend-console built with React + Vite + Tailwind + Shadcn UI
-- 📡 One-click deployment with Docker Compose
-- 📚 Supports API code, unit tests, API documentation generation
-- ⚙️ Clean RESTful API design
-
----
-
-## 🖥️ Project Structure
+## 🏗️ Project Layout
 
 ```
-Java AI Copilot for API
-├── backend (Spring Boot + OpenAI integration)
-├── frontend (React + Vite web console)
-└── docker-compose.yml (one-click deployment)
+AI-Agent-Platform/
+├── backend/                # Spring Boot services (API Gateway & Orchestrator)
+│   ├── src/main/java/...
+│   ├── src/main/resources/application.yml
+│   └── Dockerfile
+├── orchestrator/           # Workflow engine & scheduler            
+├── agents/                 # Your Agents—just JARs!
+│   ├── llm-agent/          # AI chat & code cognition              
+│   ├── tool-agent/         # External tool runners                 
+│   └── new-agent-template/ # Scaffold for your next Plugin         
+├── frontend/               # React + Ant Design Dashboard          
+├── docker-compose.yml      # One-command startup                   
+└── README.md               # This hype-filled guide                
 ```
+
+## 🚀 Quick Launch Guide
+
+1. **Clone & Enter**
+    ```bash
+    git clone https://github.com/nonecoding/AI-Agent-Platform.git
+    cd AI-Agent-Platform
+    ```
+2. **Set Secrets**
+    ```bash
+    export OPENAI_API_KEY=sk-...
+    ```
+3. **Fire Up**
+    ```bash
+    docker-compose up --build -d
+    ```
+4. **Explore**
+   - Dashboard → `http://localhost:3000`
+   - REST API → `http://localhost:8080/api/docs`
+   - Admire the logs: `docker-compose logs -f`
+
+## 👩‍💻 Try It: Sample Workflow
+
+1. **Create Flow**: In Dashboard, drag **User Input** → **LLM Agent** → **Formatter Agent**. 
+2. **Configure Nodes**: Double-click the LLM node, select model, craft prompt. 
+3. **Run & Watch**: Hit **Run**, zoom into live trace, see each Agent pop in green as it finishes!  
+4. **Grab Your Code**: Download ZIP of generated Java project or export a PDF report.
+
+## 🛠️ Extend & Customize
+
+- **Add an Agent**: Copy `agents/new-agent-template`, rename, implement `AgentInterface`, update `agent-registration.yml`.  
+- **Define Flows**: Edit YAML under `orchestrator/config/flows/`—new tasks appear instantly.  
+- **Dashboard Magic**: Tweak or add React components in `frontend/src/components/` to tailor UI behaviors.
+
+## 📈 Architecture at a Glance
+
+![Architecture Diagram](docs/architecture.png)
+
+## 🤝 Join the Party
+
+We love contributions, memes, and coffee-fueled late-night bug hunts:
+
+- **Issues & PRs**: https://github.com/nonecoding/AI-Agent-Platform/issues
+- **Community Chat**: QQ Group 123456789
+- **Stay Updated**: Follow repo & star for releases!
+
+## 📝 License
+
+Released under **Apache 2.0**. See [LICENSE](LICENSE) for deets.
 
 ---
-
-## 📦 Tech Stack
-
-| Module      | Tech                        |
-|-------------|-----------------------------|
-| Backend     | Java 21 / Spring Boot 3 / OpenAI API |
-| Frontend    | React 18 / Vite / Tailwind / Shadcn UI |
-| Deployment  | Docker Compose               |
-
----
-
-## 🚀 Getting Started
-
-### 1️⃣ Clone the Project
-
-```bash
-git clone https://github.com/nonecoding/Java-AI-Copilot-for-API.git
-cd Java-AI-Copilot-for-API
-```
-
-### 2️⃣ Configure OpenAI API Key
-
-Update your `docker-compose.yml`:
-
-```yml
-environment:
-  - OPENAI_API_KEY=your_api_key_here
-```
-
-Or set an environment variable:
-
-```bash
-export OPENAI_API_KEY=your_api_key_here
-```
-
-### 3️⃣ Run the Project
-
-```bash
-docker compose up --build
-```
-
-- Frontend: http://localhost:3000  
-- Backend: http://localhost:8080  
-
----
-
-## 📌 Example API Request
-
-**Endpoint:**
-
-```
-POST /api/codegen/generate?entityName=User&fields=id:Long,name:String
-```
-
-**Response Example:**
-
-```java
-@RestController
-@RequestMapping("/user")
-public class UserController {
-    // ...
-}
-```
-
----
-
-## 📊 Web Console
-
-A modern web-based console built with React + Vite + Tailwind + Shadcn UI.  
-Simply input your entity name and fields, then click **"Generate API"** to instantly generate full Java API code.
-
----
-
-## 🌈 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-1. Fork this repository
-2. Create a new branch: `feature/your-feature`
-3. Commit your changes
-4. Push to the branch
-5. Submit a Pull Request
-
----
-
-## 📄 License
-
-MIT License
-
----
-
-## ✨ Author
-
-Project by [nonecoding](https://github.com/nonecoding)
-
-If you like this project, please consider giving it a ⭐️ Star!
-```
-
----
-
-
+*Ready to level up your code game? Let the AI Agent Platform be your co-pilot!*
