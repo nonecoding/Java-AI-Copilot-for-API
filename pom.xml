@@ -56,6 +56,27 @@
             <artifactId>hibernate-validator</artifactId>
             <version>6.2.0.Final</version> <!-- 请使用适合的版本 -->
         </dependency>
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>8.5.1</version>
+            <!-- 排除旧版 okhttp 3.x，如果其他依赖引入，也排除 -->
+            <exclusions>
+                <exclusion>
+                    <groupId>com.squareup.okhttp3</groupId>
+                    <artifactId>okhttp</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- 显式引入 OkHttp 4.x，与 MinIO 8.5.1 默认兼容 -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.10.0</version>
+        </dependency>
+
+
     </dependencies>
     <dependencyManagement>
         <dependencies>

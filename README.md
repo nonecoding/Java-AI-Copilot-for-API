@@ -112,3 +112,6 @@ Released under **Apache 2.0**. See [LICENSE](LICENSE) for deets.
 
 ---
 *Ready to level up your code game? Let the AI Agent Platform be your co-pilot!*
+
+![Build](https://img.shields.io/github/actions/workflow/status/yourname/yourrepo/ci.yml)
+![Stars](https://img.shields.io/github/stars/yourname/yourrepo)
