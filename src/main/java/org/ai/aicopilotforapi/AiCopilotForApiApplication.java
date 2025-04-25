@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * TODO 全局过滤掉git commit和push中的appilication.yml和application-test.yml
+ *
+ * TODO 用户注册，用户登录
  */
 @SpringBootApplication
 public class AiCopilotForApiApplication {
