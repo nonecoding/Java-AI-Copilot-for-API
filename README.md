@@ -83,5 +83,32 @@ We love contributions, memes, and coffee-fueled late-night bug hunts:
 
 Released under **Apache 2.0**. See [LICENSE](LICENSE) for deets.
 
+
+### Hi there 👋, 我是张三（ZhangSan）
+☕️ Java 后端工程师 ｜ 🎮 Unity 游戏开发爱好者 ｜ 📚 阅读狂热分子
+> “代码要写得像诗一样优雅”  
+
+
+![Java](https://img.shields.io/badge/Java-ED8B00?logo=java)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?logo=springboot)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker)
+
+
+![Coffee](https://img.shields.io/badge/Coffee-Always%20Brewing-brown)
+![Gamer](https://img.shields.io/badge/Gamer-Level%20Up-purple)
+
+
+[![Twitter](https://img.shields.io/badge/Twitter-@zhangsan-1DA1F2?logo=twitter)](https://twitter.com/zhangsan)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-张三-blue?logo=linkedin)](https://linkedin.com/in/zhangsan)
+
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=zhangsan&theme=radical)
+
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=zhangsan&layout=compact)
+
+
+![Spotify Now Playing](https://spotify-readme.now.sh/api?user=zhangsan&layout=compact)
+
 ---
 *Ready to level up your code game? Let the AI Agent Platform be your co-pilot!*
