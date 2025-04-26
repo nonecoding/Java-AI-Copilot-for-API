@@ -1,19 +1,18 @@
 // CodeGenController.java
-package org.ai.aicopilotforapi.controller;
+package org.ai.aicopilotforapi.agent.controller;
 
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.ai.aicopilotforapi.common.config.ApiResult;
-import org.ai.aicopilotforapi.service.CodeGeneratorService;
-import org.ai.aicopilotforapi.vo.GenerateCodeReq;
+import org.ai.aicopilotforapi.agent.service.CodeGeneratorService;
+import org.ai.aicopilotforapi.agent.vo.GenerateCodeReq;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Flux;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @RestController

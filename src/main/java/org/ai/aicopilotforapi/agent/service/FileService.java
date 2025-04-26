@@ -1,6 +1,6 @@
-package org.ai.aicopilotforapi.service;
+package org.ai.aicopilotforapi.agent.service;
 
-import org.ai.aicopilotforapi.repository.FileRepository;
+import org.ai.aicopilotforapi.agent.repository.FileRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

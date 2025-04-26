@@ -1,5 +1,5 @@
 // OpenAIClient.java
-package org.ai.aicopilotforapi.client;
+package org.ai.aicopilotforapi.agent.client;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;

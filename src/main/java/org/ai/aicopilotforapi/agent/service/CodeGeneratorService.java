@@ -1,11 +1,9 @@
 // CodeGeneratorService.java
-package org.ai.aicopilotforapi.service;
+package org.ai.aicopilotforapi.agent.service;
 
 
-import org.ai.aicopilotforapi.client.OpenAIClient;
-import org.ai.aicopilotforapi.common.config.ApiResult;
-import org.ai.aicopilotforapi.common.exception.AppException;
-import org.ai.aicopilotforapi.vo.GenerateCodeReq;
+import org.ai.aicopilotforapi.agent.client.OpenAIClient;
+import org.ai.aicopilotforapi.agent.vo.GenerateCodeReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

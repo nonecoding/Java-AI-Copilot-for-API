@@ -1,4 +1,4 @@
-package org.ai.aicopilotforapi.controller;
+package org.ai.aicopilotforapi.agent.controller;
 
 import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
 import io.swagger.annotations.ApiOperation;

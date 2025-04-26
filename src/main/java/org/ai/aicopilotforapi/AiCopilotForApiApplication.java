@@ -3,13 +3,9 @@ package org.ai.aicopilotforapi;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import org.ai.aicopilotforapi.controller.DocumentTextExtractor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 
 /**
  * TODO 全局过滤掉git commit和push中的appilication.yml和application-test.yml

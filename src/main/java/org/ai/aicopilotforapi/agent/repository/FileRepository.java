@@ -1,4 +1,4 @@
-package org.ai.aicopilotforapi.repository;
+package org.ai.aicopilotforapi.agent.repository;
 
 import io.minio.MinioClient;
 import io.minio.PutObjectArgs;

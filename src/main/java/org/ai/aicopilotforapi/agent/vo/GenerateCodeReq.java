@@ -1,4 +1,4 @@
-package org.ai.aicopilotforapi.vo;
+package org.ai.aicopilotforapi.agent.vo;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

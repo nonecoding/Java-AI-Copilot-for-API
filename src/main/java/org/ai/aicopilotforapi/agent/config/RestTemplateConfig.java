@@ -1,4 +1,4 @@
-package org.ai.aicopilotforapi.config;
+package org.ai.aicopilotforapi.agent.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
