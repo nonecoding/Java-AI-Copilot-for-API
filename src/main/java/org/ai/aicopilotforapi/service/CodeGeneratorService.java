@@ -6,12 +6,16 @@ import org.ai.aicopilotforapi.client.OpenAIClient;
 import org.ai.aicopilotforapi.common.config.ApiResult;
 import org.ai.aicopilotforapi.common.exception.AppException;
 import org.ai.aicopilotforapi.vo.GenerateCodeReq;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Flux;
 
 @Service
 public class CodeGeneratorService {
+
+    @Autowired
+    private FileService fileService;
 
     private final OpenAIClient openAIClient;
 
@@ -26,7 +30,8 @@ public class CodeGeneratorService {
      * @return
      */
     public Flux<String> generateApiCode(GenerateCodeReq generateCodeReq) {
-        String prompt = "plz write for me a Spring Boot REST API，include Controller、Service、Repository，entity name is：" + generateCodeReq.getEntityName() + "，field include：" + generateCodeReq.getFields();
+        String prompt = "plz write for me a Spring Boot REST API，include Controller、Service、Repository，entity name is："
+                + generateCodeReq.getEntityName() + "，field include：" + generateCodeReq.getFields();
         return openAIClient.generateCodeStream(prompt);
     }
 
@@ -48,6 +53,7 @@ public class CodeGeneratorService {
      * @return
      */
     public Boolean uploadToMinIo(MultipartFile multipartFile) {
-        return null;
+        fileService.uploadFile(multipartFile);
+        return true;
     }
 }

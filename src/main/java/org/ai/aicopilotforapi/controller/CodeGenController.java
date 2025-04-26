@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 import reactor.core.publisher.Flux;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @RestController
 @RequestMapping("/api/codegen")
@@ -35,7 +36,7 @@ public class CodeGenController {
      */
     @ApiOperation(value = "testAiApi")
     @PostMapping("/generate")
-    public Flux<String> generateCode(@NotBlank @RequestBody GenerateCodeReq generateCodeReq) {
+    public Flux<String> generateCode(@NotNull @RequestBody GenerateCodeReq generateCodeReq) {
         return codeGeneratorService.generateApiCode(generateCodeReq);
     }
 
