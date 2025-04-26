@@ -1,3 +1,7 @@
+![Uploading image.png…]()
+
+
+
 # AI Agent Platform 🚀
 
 Welcome to the **AI Agent Platform**, an open-source marvel powered by **Java** and a **modular multi-agent AI** architecture. We turn complex code generation and workflow orchestration into a playful, drag-and-drop experience! 
