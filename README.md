@@ -119,3 +119,30 @@ Released under **Apache 2.0**. See [LICENSE](LICENSE) for deets.
 
 ![Build](https://img.shields.io/github/actions/workflow/status/yourname/yourrepo/ci.yml)
 ![Stars](https://img.shields.io/github/stars/yourname/yourrepo)
+![Build](https://img.shields.io/github/actions/workflow/status/YourUser/YourRepo/ci.yml)
+![Coverage](https://img.shields.io/codecov/c/github/YourUser/YourRepo)
+![License](https://img.shields.io/github/license/YourUser/YourRepo)
+
+![Stars](https://img.shields.io/github/stars/YourUser/YourRepo?style=social)
+
+![Deployments](https://img.shields.io/badge/deploys-25-brightgreen)
+
+[![API Docs](https://img.shields.io/badge/API-Swagger-blue)](http://localhost:8080/swagger-ui.html)
+
+
+[![code of conduct](https://img.shields.io/badge/Code%20of%20Conduct-Contributor%20Covenant-ff69b4.svg)](CODE_OF_CONDUCT.md)
+
+![help wanted](https://img.shields.io/github/issues/YourUser/YourRepo/help%20wanted)
+
+[🚀 Project Board](https://github.com/YourUser/YourRepo/projects)
+
+
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=YourUser&show_icons=true)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=YourUser)
+
+![Trophy](https://github-profile-trophy.vercel.app/?username=YourUser)
+
+
+
+

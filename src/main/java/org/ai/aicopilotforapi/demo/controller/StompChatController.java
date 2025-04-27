@@ -1,18 +1,21 @@
 package org.ai.aicopilotforapi.demo.controller;
 
-import org.springframework.messaging.handler.annotation.*;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
+@RequestMapping("/demo")
 public class StompChatController {
-    private final SimpMessagingTemplate template;
-    public StompChatController(SimpMessagingTemplate tmpl) {
-        this.template = tmpl;
+
+    private final SimpMessagingTemplate messagingTemplate;
+
+    public StompChatController(SimpMessagingTemplate messagingTemplate) {
+        this.messagingTemplate = messagingTemplate;
     }
 
-    @MessageMapping("/chat.send")
-    public void send(@Payload String msg) {
-        template.convertAndSend("/topic/messages", msg);
+    @PostMapping("/send")
+    public void sendMessage(@RequestParam String msg) {
+        // Broadcast to all subscribers of /topic/messages
+        messagingTemplate.convertAndSend("/topic/messages", msg);
     }
 }
