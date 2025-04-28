@@ -60,7 +60,7 @@ public class CodeGenController {
      */
     @PostMapping("uploadToMinIo")
     @ApiOperation(value = "uploadToMinIo")
-    public ApiResult<Boolean> uploadToMinIo(@RequestBody MultipartFile multipartFile) {
+    public ApiResult<String> uploadToMinIo(@RequestBody MultipartFile multipartFile) {
         return ApiResult.success(codeGeneratorService.uploadToMinIo(multipartFile));
     }
 

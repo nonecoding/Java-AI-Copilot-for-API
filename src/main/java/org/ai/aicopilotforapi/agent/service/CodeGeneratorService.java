@@ -50,8 +50,7 @@ public class CodeGeneratorService {
      * @param multipartFile
      * @return
      */
-    public Boolean uploadToMinIo(MultipartFile multipartFile) {
-        fileService.uploadFile(multipartFile);
-        return true;
+    public String uploadToMinIo(MultipartFile multipartFile) {
+        return fileService.uploadFile(multipartFile);
     }
 }

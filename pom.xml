@@ -109,29 +109,28 @@
         </dependency>
 
 
-            <!-- Alipay Java SDK (扫码预下单) -->
+        <!-- Alipay Java SDK (扫码预下单) -->
         <dependency>
             <groupId>com.alipay.sdk</groupId>
             <artifactId>alipay-sdk-java</artifactId>
             <version>4.40.112.ALL</version>
         </dependency>
-            <!-- 支付宝统一收单交易预创建接口文档 -->
-            <!-- :contentReference[oaicite:0]{index=0} -->
+        <!-- 支付宝统一收单交易预创建接口文档 -->
+        <!-- :contentReference[oaicite:0]{index=0} -->
 
-            <!-- ZXing 用于二维码生成 -->
-            <dependency>
-                <groupId>com.google.zxing</groupId>
-                <artifactId>core</artifactId>
-                <version>3.5.1</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.zxing</groupId>
-                <artifactId>javase</artifactId>
-                <version>3.5.1</version>
-            </dependency>
-            <!-- ZXing 教程：二维码生成与读取 -->
-            <!-- :contentReference[oaicite:1]{index=1} -->
-
+        <!-- ZXing 用于二维码生成 -->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+        <!-- ZXing 教程：二维码生成与读取 -->
+        <!-- :contentReference[oaicite:1]{index=1} -->
 
 
         <!-- AOP -->
@@ -167,10 +166,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-zipkin</artifactId>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-zipkin</artifactId>-->
+        <!--        </dependency>-->
         <!-- Quartz Scheduler -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -213,6 +212,16 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
         </dependency>
+
+        <!-- 添加 springdoc-openapi 依赖，支持 WebFlux -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-webflux-ui</artifactId>
+            <version>1.6.15</version>
+        </dependency>
+
+
+
     </dependencies>
 
     <repositories>
