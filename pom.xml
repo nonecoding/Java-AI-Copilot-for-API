@@ -272,7 +272,6 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>org.ai.aicopilotforapi.AiCopilotForApiApplication</mainClass>
-                    <skip>true</skip>
                 </configuration>
                 <executions>
                     <execution>
