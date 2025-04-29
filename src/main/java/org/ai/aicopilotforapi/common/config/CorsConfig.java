@@ -29,7 +29,7 @@ public class CorsConfig implements WebMvcConfigurer {
         // 对所有应用路径生效
         source.registerCorsConfiguration("/**", config);
         // 单独再注册 Swagger UI、资源、API docs 路径，确保它们也被 CORS 过滤
-        source.registerCorsConfiguration("/v2/api-docs", config);
+        source.registerCorsConfiguration("/v3/api-docs", config);
         source.registerCorsConfiguration("/swagger-resources/**", config);
         source.registerCorsConfiguration("/swagger-ui/**", config);
         source.registerCorsConfiguration("/webjars/**", config);
@@ -45,7 +45,7 @@ public class CorsConfig implements WebMvcConfigurer {
         registry.addInterceptor(new MyCustomInterceptor())
                 .addPathPatterns("/**")
                 .excludePathPatterns(
-                        "/v2/api-docs",
+                        "/v3/api-docs",
                         "/swagger-resources/**",
                         "/swagger-ui/**",
                         "/webjars/**"

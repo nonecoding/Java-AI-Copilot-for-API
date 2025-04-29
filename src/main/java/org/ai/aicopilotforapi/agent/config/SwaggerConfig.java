@@ -23,7 +23,7 @@ public class SwaggerConfig {
                 // select()：生成 API 文档的选择器，用于指定要生成哪些 API 文档
                 .select()
                 // apis()：指定要生成哪个包下的 API 文档
-                .apis(RequestHandlerSelectors.basePackage("org.ai.aicopilotforapi.controller"))
+                .apis(RequestHandlerSelectors.basePackage("org.ai.aicopilotforapi"))
                 // paths()：指定要生成哪个 URL 匹配模式下的 API 文档。这里使用 PathSelectors.any()，表示生成所有的 API 文档。
                 .paths(PathSelectors.any())
                 .build();

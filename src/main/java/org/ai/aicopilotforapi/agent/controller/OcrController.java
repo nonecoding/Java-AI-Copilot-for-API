@@ -23,6 +23,10 @@ public class OcrController {
 
     @PostMapping(value = "/extract", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public String extractText(@RequestParam("file") MultipartFile file) throws Exception {
+        logger.info("上传文件名: {}, 大小: {}", file.getOriginalFilename(), file.getSize());
+        if (file.isEmpty()) {
+            throw new IllegalArgumentException("上传文件为空！");
+        }
         try (ByteArrayOutputStream out = new ByteArrayOutputStream()) {
             extractor.extractText(file.getInputStream(), out);
             String extractedText = out.toString("UTF-8");
