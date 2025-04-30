@@ -22,7 +22,7 @@ public class OcrController {
     @PostMapping(value = "/recognize", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public String recognizeImage(@RequestParam("file") MultipartFile file) throws TesseractException, IOException {
 
-        // 调用OcrService中的方法进行文字识别
-        return ocrService.recognizeText(file);
+      // 调用OcrService中的方法进行文字识别
+      return ocrService.recognizeText(file);
     }
 }

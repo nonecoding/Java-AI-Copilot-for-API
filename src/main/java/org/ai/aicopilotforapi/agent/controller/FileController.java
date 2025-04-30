@@ -9,8 +9,12 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Map;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
-@RequestMapping("/files")
+@RequestMapping("/file")
+@Api(tags = "文件接口")
 public class FileController {
     private final FileStorageService storageService;
 
@@ -23,6 +27,7 @@ public class FileController {
      * Returns JSON with the stored filename and download URI.
      */
     @PostMapping("/upload")
+    @ApiOperation(value = "上传文件", notes = "上传文件到服务器")
     public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) {
         try {
             String filename = storageService.store(file);

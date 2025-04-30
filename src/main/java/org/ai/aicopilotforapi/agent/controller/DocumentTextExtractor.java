@@ -61,6 +61,12 @@ public class DocumentTextExtractor {
 
     public String extractText(InputStream inputStream, OutputStream out) throws IOException, TikaException, SAXException {
         // 先检测 MIME 类型
+        int availableBytes = inputStream.available();
+        logger.debug("InputStream available bytes: {}", availableBytes);
+        if (availableBytes == 0) {
+            logger.warn("InputStream is empty, aborting extraction.");
+            throw new IOException("InputStream is empty, cannot extract text.");
+        }
         String mimeType = tika.detect(inputStream);
         logger.debug("Detected MIME type: {}", mimeType);  // 打印日志输出 MIME 类型
 
