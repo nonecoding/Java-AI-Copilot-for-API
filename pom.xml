@@ -113,7 +113,7 @@
         <dependency>
             <groupId>com.alipay.sdk</groupId>
             <artifactId>alipay-sdk-java</artifactId>
-            <version>4.40.112.ALL</version>
+            <version>4.40.217.ALL</version>
         </dependency>
         <!-- 支付宝统一收单交易预创建接口文档 -->
         <!-- :contentReference[oaicite:0]{index=0} -->
