@@ -48,7 +48,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.26</version>  <!-- 最新版本可以从 Maven Central 获取 -->
+            <version>1.18.38</version>  <!-- 最新版本可以从 Maven Central 获取 -->
             <scope>provided</scope> <!-- 运行时不需要Lombok，编译时才用 -->
         </dependency>
         <dependency>
