@@ -59,7 +59,7 @@
         <dependency>
             <groupId>io.minio</groupId>
             <artifactId>minio</artifactId>
-            <version>8.5.1</version>
+            <version>8.5.4</version>
             <!-- 排除旧版 okhttp 3.x，如果其他依赖引入，也排除 -->
             <exclusions>
                 <exclusion>
@@ -179,7 +179,7 @@
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-openapi3-spring-boot-starter</artifactId>
-            <version>4.2.0</version>
+            <version>4.3.0</version>
         </dependency>
         <!-- HTTP Client -->
         <dependency>
@@ -217,7 +217,7 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-webflux-ui</artifactId>
-            <version>1.6.15</version>
+            <version>1.7.0</version>
         </dependency>
 
 
