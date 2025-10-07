@@ -59,7 +59,7 @@
         <dependency>
             <groupId>io.minio</groupId>
             <artifactId>minio</artifactId>
-            <version>8.5.1</version>
+            <version>8.6.0</version>
             <!-- 排除旧版 okhttp 3.x，如果其他依赖引入，也排除 -->
             <exclusions>
                 <exclusion>
@@ -105,7 +105,7 @@
         <dependency>
             <groupId>net.sourceforge.tess4j</groupId>
             <artifactId>tess4j</artifactId>
-            <version>4.5.1</version>
+            <version>4.5.4</version>
         </dependency>
 
 
